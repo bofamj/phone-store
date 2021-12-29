@@ -1,0 +1,52 @@
+header{
+    width: 100%;
+    background-color: rgb(13, 23, 49);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px 200px;
+    color:#fff;
+    
+}
+
+header h2{
+    font-family: 'Yuji Hentaigana Akari', cursive;
+    cursor:pointer;
+    text-transform: uppercase;
+}
+
+header nav a{
+    padding-left: 1.5em;
+    color:#fff;
+    text-transform: uppercase;
+}
+header nav a:hover{
+    color:rgba(194, 45, 45,0.5)
+}
+.menu{
+    padding-left:10px ;
+    font-size: 1.5em;
+    display: none;
+}
+@media screen and (max-width:850px){
+    header{
+        padding:10px 100px
+    }
+    header nav a{
+        display:none
+    }
+    .menu{
+        cursor: pointer;
+        font-size: 2em;
+        display: block;
+        transition: 0.5s ease;
+    }
+    .menu:hover{
+        transform:rotate(90deg)
+    }
+}
+@media screen and (max-width:450px){
+    header{
+        padding:10px 50px
+    }
+}
