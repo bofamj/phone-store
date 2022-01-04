@@ -1,11 +1,17 @@
 require('dotenv').config()
 require('express-async-errors')
 
+
+
+//!test
+const product = require('./models/product')
+
 const express = require('express');
 
 const app = express();
 
 const connectDB = require('./db/connect');
+app.use(express.json())
 
 
 //*the error handeler
@@ -14,9 +20,14 @@ const errorMiddleware = require('./errors/error-handler') */
 
 //* home route
 app.get('/',(req,res)=>{
-    res.send('phone page')
+    res.status(200).send(`<h1>stor api</h1><a href="/api/v1/products">products</a>`)
 })
 
+
+app.get('/api/v1/products',async(req,res)=>{
+    const products = await product.find({})
+    res.status(200).send({products})
+})
 
 /* app.use(notFoundMiddleware)
 app.use(errorMiddleware) */

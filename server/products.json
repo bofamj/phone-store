@@ -1,0 +1,91 @@
+
+[
+    {
+      "name": "iPhone 11",
+      "price": 599,
+      "company": "appel",
+      "rating": 4.5,
+      "description":"Apple iPhone 11 64GB, White + Carrier Subscription Cricket Wireless",
+      "imageURL":"https://m.media-amazon.com/images/I/61F7c4q8TNL._FMwebp__.jpg"
+    },
+    {
+      "name": "iPhone 13 Mini",
+      "price": 729,
+      "company": "appel",
+      "rating": 4,
+      "description":"Apple iPhone 13 Mini (128GB, Pink) [Locked] + Carrier Subscription",
+      "imageURL":"https://m.media-amazon.com/images/I/61F7c4q8TNL._FMwebp__.jpg"
+    },
+    {
+      "name": "iPhone 13 Pro",
+      "price": 999,
+      "company": "appel",
+      "rating": 4.9,
+      "description":"Apple iPhone 13 Pro (128GB, Sierra Blue) [Locked] + Carrier Subscription",
+      "imageURL":"https://m.media-amazon.com/images/I/61Tda9m5UUL._FMwebp__.jpg"
+    },
+    {
+      "name": "iPhone 12",
+      "price": 829,
+      "company": "appel",
+      "rating": 4.3,
+      "description":"Apple iPhone 12 (64GB, Blue) [Locked] + Carrier Subscription",
+      "imageURL":"https://m.media-amazon.com/images/I/71ZOtNdaZCL._FMwebp__.jpg"
+    },
+    {
+      "name": "iPad Pro",
+      "price": 1099,
+      "company": "appel",
+      "rating": 4.7,
+      "description":"2021 Apple 12.9-inch iPad Pro (Wi‑Fi, 256GB) - Space Gray",
+      "imageURL":"https://m.media-amazon.com/images/I/81+N4PFF7jS._AC_SL1500_.jpg"
+    },
+    {
+      "name": "Galaxy S10",
+      "price": 257.57,
+      "company": "samsung",
+      "rating": 4.2,
+      "description":"Samsung Galaxy S10, 128GB, Prism Black - Unlocked (Renewed)",
+      "imageURL":"https://m.media-amazon.com/images/I/61T+m1plXuL._AC_SL1472_.jpg"
+    },
+    {
+      "name": "Galaxy S20",
+      "price": 599.99,
+      "company": "samsung",
+      "rating": 4.5,
+      "description":"SAMSUNG Galaxy S20 FE 5G Factory Unlocked Android Cell Phone 128GB US Version  Smartphone Pro-Grade Camera 30X Space Zoom Night Mode, Cloud Navy",
+      "imageURL":"https://m.media-amazon.com/images/I/71RxOftVoQL._AC_SL1500_.jpg"
+    },
+    {
+      "name": "Galaxy S21",
+      "price": 1175,
+      "company": "samsung",
+      "rating": 4.8,
+      "description":"SAMSUNG Galaxy S21 Ultra 5G Factory Unlocked Android Cell Phone 128GB US Version Smartphone Pro-Grade Camera 8K Video 108MP High Res, Phantom Black",
+      "imageURL":"https://m.media-amazon.com/images/I/61O45C5qASL._AC_SL1000_.jpg"
+    },
+    {
+      "name": "Reno 6 Pro",
+      "price": 599.99,
+      "company": "oppo",
+      "rating": 4.6,
+      "description":"Oppo Reno 6 Pro 5G Dual CPH2247 256GB 12GB RAM Factory Unlocked (GSM Only | No CDMA - not Compatible with Verizon/Sprint) International Version - Arctic Blue",
+      "imageURL":"https://m.media-amazon.com/images/I/41VNk1g+rPL._AC_.jpg"
+    },
+    {
+      "name": "Red Magic 6",
+      "price": 624.99,
+      "company": "redmagic",
+      "rating": 4,
+      "description":"Red Magic 6 5G Factory Unlocked Cell Phone, 6.8 in 165Hz Gaming Phone 12GB RAM + 128GB ROM, US Version Dual SIM Android Smartphone, 64MP Camera and 66W Quick Charging 5050mAh NFC Mobile Black, NX669J",
+      "imageURL":"https://m.media-amazon.com/images/I/61ZYeY34zBS._AC_SL1500_.jpg"
+    },
+    {
+      "name": "P40 Pro",
+      "price": 988.88,
+      "company": "huawei",
+      "rating": 4.2,
+      "description":"Huawei P40 Pro 5G ELS-NX9 256GB 8GB RAM Without Google Play International Version - Silver Frost",
+      "imageURL":"https://m.media-amazon.com/images/I/610uWzNVzRL._AC_SL1000_.jpg"
+    }
+] 
