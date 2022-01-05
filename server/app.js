@@ -13,10 +13,11 @@ const app = express();
 const connectDB = require('./db/connect');
 app.use(express.json())
 
+const productRouter = require('./routes/product')
 
 //*the error handeler
-/* const notFoundMiddleware = require('./errors/not-found')
-const errorMiddleware = require('./errors/error-handler') */
+const notFoundMiddleware = require('./errors/not-found')
+const errorMiddleware = require('./errors/error-handler') 
 
 //* home route
 app.get('/',(req,res)=>{
@@ -24,10 +25,8 @@ app.get('/',(req,res)=>{
 })
 
 
-app.get('/api/v1/products',async(req,res)=>{
-    const products = await product.find({})
-    res.status(200).send({products})
-})
+app.use('/api/v1/products',productRouter)
+    
 
 /* app.use(notFoundMiddleware)
 app.use(errorMiddleware) */

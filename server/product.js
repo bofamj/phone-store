@@ -1,4 +1,4 @@
-/*  require('dotenv').config()
+/* require('dotenv').config()
 
 const connectDB = require('./db/connect')
 
@@ -18,4 +18,4 @@ const start = async ()=>{
         console.log(error)
     }
 }
-start()  */
+start()  */ 

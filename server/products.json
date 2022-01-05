@@ -87,5 +87,133 @@
       "rating": 4.2,
       "description":"Huawei P40 Pro 5G ELS-NX9 256GB 8GB RAM Without Google Play International Version - Silver Frost",
       "imageURL":"https://m.media-amazon.com/images/I/610uWzNVzRL._AC_SL1000_.jpg"
+    },
+    {
+      "name": "Motorola One",
+      "price": 399.99,
+      "company": "motorola",
+      "rating": 3.7,
+      "description":"Motorola One 5G Ace | 2021 | 2-Day battery | Unlocked | Made for US by Motorola | 6/128GB | 48MP Camera | Hazy Silver",
+      "imageURL":"https://m.media-amazon.com/images/I/71GbORP-umL._AC_SL1500_.jpg"
+    },
+    {
+      "name": "Nokia 8",
+      "price": 338.99,
+      "company": "nokia",
+      "rating": 3.5,
+      "description":"Nokia 8 V 5G UW TA-1257 6/64GB 6.8in Meteor Gray 8v VERIZON Unlocked for Any SIM - Complete with SIMBROS Extra sim Key Bundle Package",
+      "imageURL":"https://m.media-amazon.com/images/I/31omIicdlqL._AC_.jpg"
+    },
+    {
+      "name": "BLU G91 Pro",
+      "price": 199.99,
+      "company": "BLU",
+      "rating": 2.5,
+      "description":"BLU G91 Pro | 2022 | 3-Day Battery | Unlocked | 6.7” Full HD+ Display | 128GB | 48MP Quad Camera | US Version | US Warranty | Graphite",
+      "imageURL":"https://m.media-amazon.com/images/I/715rv1LIguL._AC_SL1500_.jpg"
+    },
+    {
+      "name": "BLU Aria Pod+",
+      "price": 29.99,
+      "company": "BLU",
+      "rating": 2.5,
+      "description":"BLU Aria Pod+ |Wireless Earbuds| Bluetooth Headphones | 2021 | 18 Hours Battery | Grey",
+      "imageURL":"https://m.media-amazon.com/images/I/71XynWEc3HS._AC_SL1500_.jpg"
+    },
+    {
+      "name": "Oppo PM-3",
+      "price": 35.94,
+      "company": "oppo",
+      "rating": 3.7,
+      "description":"Oppo PM-3 Closed-Back Planar Magnetic Headphones (Black)",
+      "imageURL":"https://m.media-amazon.com/images/I/71T+xuAveKL._AC_SL1500_.jpg"
+    },
+    {
+      "name": "OPPO FIND X3 PRO",
+      "price": 617.50,
+      "company": "oppo",
+      "rating": 4,
+      "description":"OPPO FIND X3 PRO 5G CPH2173 Global ROM EU/UK Model Dual SIM 12GB RAM, 256GB Storage Factory Unlocked International Version - Blue",
+      "imageURL":"https://m.media-amazon.com/images/I/417UY5sPvtL._AC_.jpg"
+    },
+    {
+      "name": "Galaxy Z Flip 3",
+      "price": 944.79,
+      "company": "samsung",
+      "rating": 4,
+      "description":"SAMSUNG Galaxy Z Flip 3 5G Factory Unlocked Android Cell Phone US Version Smartphone Flex Mode, Intuitive Camera Compact 128GB Storage US Warranty, Cream",
+      "imageURL":"https://m.media-amazon.com/images/I/615t8+dWIYL._AC_SL1500_.jpg"
+    },
+    {
+      "name": "Galaxy Z Fold 2",
+      "price": 1299.99,
+      "company": "samsung",
+      "rating": 4.1,
+      "description":"Galaxy Z Fold 2 5G | SM-F916N 256GB | Factory Unlocked - Korean International Version (Mystic Bronze)",
+      "imageURL":"https://m.media-amazon.com/images/I/61qwByY07KL._AC_SL1500_.jpg"
+    },
+    {
+      "name": "Galaxy Note 20 Ultra",
+      "price": 1349.98,
+      "company": "samsung",
+      "rating": 4.7,
+      "description":"Samsung Galaxy Note 20 Ultra 5G Factory Unlocked Android Cell Phone 128GB US Version Mobile Gaming Smartphone Long-Lasting Battery, Mystic Bronze",
+      "imageURL":"https://m.media-amazon.com/images/I/81AT+Flc+EL._AC_SL1500_.jpg"
+    },
+    {
+      "name": "Motorola edge",
+      "price": 699.99,
+      "company": "motorola",
+      "rating": 4.9,
+      "description":"Motorola edge | Unlocked | Made for US by Motorola | 6/256GB | 64MP Camera | 2020 | Solor Black",
+      "imageURL":"https://m.media-amazon.com/images/I/61mZbKHrViL._AC_SL1500_.jpg"
+    },
+    {
+      "name": "Moto G Stylus",
+      "price": 399.99,
+      "company": "motorola",
+      "rating": 3.9,
+      "description":"Moto G Stylus 5G | 2021 | 2-Day Battery | Unlocked | Made for US by Motorola | 6/256GB | 48MP Camera | Cosmic Emerald",
+      "imageURL":"https://m.media-amazon.com/images/I/61mZbKHrViL._AC_SL1500_.jpg"
+    },
+    {
+      "name": "Red Magic 6S Pro",
+      "price": 649.99,
+      "company": "redmagic",
+      "rating": 3.3,
+      "description":"Red Magic 6S Pro 5G Dual 128GB 12GB RAM Factory Unlocked (GSM Only | No CDMA - not Compatible with Verizon/Sprint) International Version - Black",
+      "imageURL":"https://m.media-amazon.com/images/I/61yCidlZy0L._AC_SL1500_.jpg"
+    },
+    {
+      "name": "Red Magic 6S ",
+      "price": 579.98,
+      "company": "redmagic",
+      "rating": 3,
+      "description":"Red Magic 6R 5G Factory Unlocked Cell Phone, 6.67 144Hz Gaming Phone 12GB RAM + 256GB ROM, US Version Dual SIM Android Smartphone, 64MP Camera and 30W Quick Charging 4200mAh NFC Mobile Phone Silver",
+      "imageURL":"https://m.media-amazon.com/images/I/71S0u3YtBBS._AC_SL1500_.jpg"
+    },
+    {
+      "name": "P50 Pro ",
+      "price": 1177.99,
+      "company": "huawei",
+      "rating": 4.8,
+      "description":"Huawei P50 Pro JAD-AL50 256GB 8GB RAM Factory Unlocked (GSM Only | No CDMA - not Compatible with Verizon/Sprint) No Google Play Installed China Version – Gold",
+      "imageURL":"https://m.media-amazon.com/images/I/41xUv+Uod7L._AC_.jpg"
+    },
+    {
+      "name": "HUAWEI Watch GT 2 Pro ",
+      "price": 213.96,
+      "company": "huawei",
+      "rating": 4.4,
+      "description":"HUAWEI Watch GT 2 Pro Smart Watch 1.39 inch AMOLED Touchscreen SmartWatch, Sport GPS 14 Days Battery Life, Heart Rate Tracker, Blood Oxygen Monitor Waterproof Bluetooth Calls for Android, Black",
+      "imageURL":"https://m.media-amazon.com/images/I/71YDNwogPjL._AC_SL1500_.jpg"
+    },
+    {
+      "name": "HUAWEI Band 6 ",
+      "price":54.99,
+      "company": "huawei",
+      "rating": 4.2,
+      "description":"HUAWEI Band 6 Fitness Tracker Smartwatch for Men Women, 1.47’’ AMOLED Color Screen, All Day Spo2 and Heart Rate Monitoring,2 Week Battery Life,5ATM Waterproof, Global Version,Pink",
+      "imageURL":"https://m.media-amazon.com/images/I/61ijIcdRHRL._AC_SL1500_.jpg"
     }
 ] 

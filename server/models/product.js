@@ -57,7 +57,7 @@ module.export = mongoose.model('product',productSchema) */
     company: {
       type: String,
       enum: {
-        values: ['redmagic', 'huawei', 'oppo', 'samsung' , 'appel'],
+        values: ['redmagic', 'huawei', 'oppo', 'samsung' , 'appel' , 'motorola' , 'nokia' , 'BLU'],
         message: '{VALUE} is not supported',
       },
       // enum: ['ikea', 'liddy', 'caressa', 'marcos'],
