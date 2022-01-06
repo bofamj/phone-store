@@ -3,8 +3,9 @@
     position: fixed;
     display:flex;
     flex-direction: column;
-    background:url(https://cdn57.androidauthority.net/wp-content/uploads/2018/10/oppo-r-series-1.jpg)no-repeat;
-    background-size: cover;
+    background:url('../../../public//photo//pexels-thiago-japyassu-1069798.jpg')no-repeat;
+    background-size:cover;
+    background-position: center;
     height:calc(100vh - 55px);
     justify-content: center;
     align-items:flex-start;
@@ -12,10 +13,33 @@
     top:55px;
     right:0;
     z-index: -5;
-    color:rgb(212, 3, 3);
+    color:rgb(255, 255, 255);
     
 }
 .hearo h1{
     font-size:40px;
     font-weight: 800;
+}
+
+/*https://cdn57.androidauthority.net/wp-content/uploads/2018/10/oppo-r-series-1.jpg*/
+
+/* midya*/
+
+@media screen and (max-width:850px){
+    .hearo{
+        padding:10px 100px
+    }
+    .hearo h1{
+        font-size:30px;
+        font-weight: 900;
+    }
+}
+@media screen and (max-width:450px){
+    .hearo{
+        padding:10px 50px
+    }
+    .hearo h1{
+        font-size:30px;
+        font-weight:900;
+    }
 }
