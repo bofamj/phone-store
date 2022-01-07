@@ -8,8 +8,11 @@ const product = require('./models/product')
 
 const express = require('express');
 
-const app = express();
-
+ const app = express();
+const cors = require('cors');
+app.use(cors({
+    origin:'*'
+})); 
 const connectDB = require('./db/connect');
 app.use(express.json())
 

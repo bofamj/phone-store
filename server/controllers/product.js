@@ -19,6 +19,8 @@ if(name){
     queryObject.name = {$regex:name,$options:'i'}
 }
 
+//* sort
+
     const products = await product.find(queryObject)
     res.status(200).json({products,nbHits:products.length})
 }

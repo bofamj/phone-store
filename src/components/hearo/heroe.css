@@ -1,6 +1,6 @@
 .hearo{
     width: 100%;
-    position: fixed;
+    position:sticky;
     display:flex;
     flex-direction: column;
     background:url('../../../public//photo//pexels-thiago-japyassu-1069798.jpg')no-repeat;

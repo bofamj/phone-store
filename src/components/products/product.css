@@ -1,0 +1,26 @@
+.all-carts{
+    background-color: rgb(238, 228, 189);
+    width: 100%;
+    padding:100px 200px;
+    display:grid;
+    grid-template-columns: repeat(3, 300px);
+    column-gap: 1rem;
+    row-gap: 3rem;
+}
+
+
+/*singel cart*/
+
+.cart{
+    height:350px;
+    margin:0px 20px;
+    background-color:#fff;
+    display: flex;
+    flex-direction: column;
+    
+}
+.cart img{
+    max-width:350px;
+    
+
+}
