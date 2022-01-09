@@ -1,7 +1,7 @@
 import React,{useState,useEffect,useContext} from 'react';
-
+import axios from 'axios';
 const AppContext = React.createContext()
-//
+
 
 const AppProvider = ({children})=>{
     const [isOpen,setIsOpen]=useState(false)

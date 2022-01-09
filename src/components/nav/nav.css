@@ -6,7 +6,8 @@ header{
     justify-content:space-between;
     padding:10px 200px;
     color:#fff;
-    position:sticky;
+    position:fixed;
+    z-index: 100;
 }
 
 header h2{
