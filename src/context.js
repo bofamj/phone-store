@@ -7,14 +7,16 @@ const AppProvider = ({children})=>{
     const [isOpen,setIsOpen]=useState(false)
     const [product,setProduct]=useState([])
     const [isLoading,setIsLoading]=useState(false)
-    const url = '/api/v1/products'
+    const [cardItem,setCardItem]=useState([])
+
+
+
      const getAllProducts= async()=>{
        try {
         setIsLoading(true)
         const response = await fetch('http://localhost:3000/api/v1/products')
         const data = await response.json()
         setIsLoading(false)
-    
         setProduct(data.products)
        } catch (error) {
            console.log(error);
@@ -22,13 +24,30 @@ const AppProvider = ({children})=>{
          
          
     } 
-    console.log(product)
+
+    //*add to card click functionalty
+
+        const addItem = e=>{
+            const val = e.target.value
+            
+            const cartItem = product.filter((item)=>{
+                if(item._id == val){
+                    return item
+                }
+                
+            })
+            let cart = [...cardItem]
+            cart.push({cartItem})
+            setCardItem(cart)
+            
+            console.log(cardItem);
+        }
     
      useEffect(() =>{
         getAllProducts()
     },[]) 
     return(
-        <AppContext.Provider value={{setIsOpen,isOpen,product,isLoading}}>
+        <AppContext.Provider value={{setIsOpen,isOpen,product,isLoading,addItem}}>
             {children}
         </AppContext.Provider>
     )

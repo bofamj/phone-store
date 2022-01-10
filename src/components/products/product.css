@@ -59,7 +59,6 @@
     bottom: 70px;
     transform: translateX(250px);
     width:50px;
-    padding:5px;
     font-size: 20px;
     background-color: rgb(238, 228, 189);
     color:rgb(97, 52, 52);
@@ -71,4 +70,13 @@
 }
 .img-continert:hover .add-tocart{
     transform: translateX(200px);
+}
+.btn{
+    width:100%;
+    padding:5px;
+    background:none;
+    border:none;
+    color:rgb(97, 52, 52);
+    font-size: 25px;
+    cursor:pointer;
 }
