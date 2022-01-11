@@ -37,17 +37,19 @@ const AppProvider = ({children})=>{
                 
             })
             let cart = [...cardItem]
-            cart.push({cartItem})
+            //console.log(cartItem[0].name)
+            //const {company,imageURL,name,price}=cartItem[0]
+            cart.push(cartItem)
             setCardItem(cart)
             
-            console.log(cardItem);
+            //console.log(cardItem);
         }
     
      useEffect(() =>{
         getAllProducts()
     },[]) 
     return(
-        <AppContext.Provider value={{setIsOpen,isOpen,product,isLoading,addItem}}>
+        <AppContext.Provider value={{setIsOpen,isOpen,product,isLoading,addItem,cardItem}}>
             {children}
         </AppContext.Provider>
     )

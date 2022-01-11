@@ -46,10 +46,10 @@
 }
 .text-continer h2{
     font-size: 1em;
-    color:rgb(97, 52, 52);
+    color:rgb(19, 23, 26);
 }
 .text-continer h3{
-    color: rgb(248, 20, 20);
+    color: rgba(238, 14, 14, 0.945);
     font-size: 0.95em;
     font-weight:200;
 }
