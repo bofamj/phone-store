@@ -8,7 +8,7 @@ const product = require('./models/product')
 
 const express = require('express');
 
- const app = express();
+const app = express();
 const cors = require('cors');
 app.use(cors({
     origin:'*'
@@ -17,6 +17,7 @@ const connectDB = require('./db/connect');
 app.use(express.json())
 
 const productRouter = require('./routes/product')
+const cartRouter = require('./routes/cart')
 
 //*the error handeler
 const notFoundMiddleware = require('./errors/not-found')
@@ -29,6 +30,7 @@ app.get('/',(req,res)=>{
 
 
 app.use('/api/v1/products',productRouter)
+app.use('/api/v1/cart',cartRouter)
     
 
 /* app.use(notFoundMiddleware)
