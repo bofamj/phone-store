@@ -1,6 +1,6 @@
 import Nav from './components/nav/Nav'
 import SaideBar from './components/side-bar/SaideBar'
-import Hearo from './components/hearo/Hearo'
+import Home from './components/home/Home'
 import Products from './components/products/Products'
 import Carts from './components/cart/Carts'
 import './App.css';
@@ -19,9 +19,8 @@ function App() {
         <div className={isOpen?'side side-opened':'side'}>
           {isOpen?<SaideBar/>:''}
         </div>
-        <Hearo />
-        <Products/>
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Carts/>} />
         </Routes>
       </div>
