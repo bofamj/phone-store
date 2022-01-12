@@ -9,7 +9,7 @@ const Nav = () => {
     const{isOpen,setIsOpen}=useGlobalContext()
     return (
         <header>
-            <h2>tec store</h2>
+            <Link to="/"><h2>tec store</h2></Link>
             <nav>
                 
                 <Link to="/">Home</Link>
