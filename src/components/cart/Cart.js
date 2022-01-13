@@ -6,10 +6,11 @@ import {AiOutlineMinusCircle } from 'react-icons/ai';
 
 
 
-const Cart = ({company,imageURL,name,price}) => {
+const Cart = ({company,imageURL,name,price,_id}) => {
+    
     const [quantity,setQuantity]=useState(1)
     return (
-        <div className='card-contener'>
+        <div key={_id} className='card-contener'>
             <div className='img-continer'>
                 <img src={imageURL} alt={name} />
             </div>

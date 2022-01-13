@@ -21,7 +21,7 @@ const Carts = () => {
         <section className='cart-raper'>
             {cardItem.map((item)=>{
                 
-                return <Cart key={item._id}  {...item[0]}/>
+                return <Cart   {...item[0]}/>
 
             })}
         </section>

@@ -4,26 +4,31 @@ const AppContext = React.createContext()
 
 
 const AppProvider = ({children})=>{
+    //*state for the sid nav
     const [isOpen,setIsOpen]=useState(false)
+    //*state for the all product
     const [product,setProduct]=useState([])
+    //*state for the product loding
     const [isLoading,setIsLoading]=useState(false)
+    //*state for the cart product
     const [cardItem,setCardItem]=useState([])
 
 
-
-     const getAllProducts= async()=>{
+//*giting the data from the data base
+      const getAllProducts= async()=>{
        try {
         setIsLoading(true)
-        const response = await fetch('http://localhost:3000/api/v1/products')
-        const data = await response.json()
+        const response = await axios('http://localhost:3000/api/v1/products')
+        const data = await response
         setIsLoading(false)
-        setProduct(data.products)
+        setProduct(data.data.products)
+        
        } catch (error) {
            console.log(error);
        }
          
          
-    } 
+    }  
 
     //*add to card click functionalty
 
@@ -37,14 +42,24 @@ const AppProvider = ({children})=>{
                 
             })
             let cart = [...cardItem]
-            //console.log(cartItem[0].name)
-            //const {company,imageURL,name,price}=cartItem[0]
             cart.push(cartItem)
             setCardItem(cart)
+            //*posting the cart data to the database
+                axios.post('http://localhost:3000/api/v1/cart',{
+                    products:[
+        {
+            product:cartItem,
             
-            //console.log(cardItem);
         }
-    
+    ],
+                
+            } 
+        
+            ) 
+        }
+        
+        //console.log(cardItem.price) 
+
      useEffect(() =>{
         getAllProducts()
     },[]) 
