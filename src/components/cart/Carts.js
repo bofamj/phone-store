@@ -6,8 +6,9 @@ import './cart.css'
 
 
 const Carts = () => {
+    //const{cardItem}=useGlobalContext()
     const{cardItem}=useGlobalContext()
-    if(cardItem.length === 0){
+     if(cardItem.length === 0){
         return(
             <section className='cart-raper'>
                 <h1 className='no-item'>ther is no item in the cart last add some</h1>
@@ -16,13 +17,11 @@ const Carts = () => {
                 </h1></Link>
             </section>
             ) 
-    }
+    } 
     return (
         <section className='cart-raper'>
             {cardItem.map((item)=>{
-                
-                return <Cart   {...item[0]}/>
-
+                return <Cart key={item._id} {...item}/>
             })}
         </section>
     )
