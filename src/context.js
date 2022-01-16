@@ -10,8 +10,7 @@ const AppProvider = ({children})=>{
     const [product,setProduct]=useState([])
     //*state for the product loding
     const [isLoading,setIsLoading]=useState(false)
-    //*state for the cart product
-    const [cardItem,setCardItem]=useState([])
+    
     //*cartItemData
     const [cartItemData,setCartItemData]=useState([])
 
@@ -56,31 +55,15 @@ const getAllProducts= async()=>{
       
       //console.log(product);
  }  
- //*geting the cart items from the DB
-const getCartProducts= async()=>{
-    try {
-     setIsLoading(true)
-     const response = await axios('http://localhost:3000/api/v1/cart')
-     const data = await response
-     setIsLoading(false)
-     //console.log(data.data.cartProduct);
-     setCardItem(data.data.cartProduct)
-     //console.log(cardItem);
-    } catch (error) {
-        console.log(error);
-    }
-      
-      
- }  
+ 
      
      
     
      useEffect(() =>{
         getAllProducts()
-        getCartProducts()
     },[]) 
     return(
-        <AppContext.Provider value={{setIsOpen,isOpen,product,isLoading,addItem,cardItem,cartItemData}}>
+        <AppContext.Provider value={{setIsOpen,isOpen,product,isLoading,addItem,cartItemData,setIsLoading}}>
             {children}
         </AppContext.Provider>
     )

@@ -2,12 +2,12 @@ import React from 'react'
 import {useGlobalContext} from '../../context';
 import Product from './Product'
 import './product.css'
-
+//import spener from '../../../public/spener.svg'
 const Products = () => {
     const{product,isLoading}=useGlobalContext()
 
     if(isLoading){
-        return <h1>Loading</h1>
+        return <img src='../../../public/spener.svg' alt="" />
     }
 
     return (

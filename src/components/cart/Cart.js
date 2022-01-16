@@ -22,6 +22,7 @@ const Cart = ({company,imageURL,name,price,_id}) => {
                     <p>{quantity}</p>
                     <IoIosAddCircleOutline className='btn'/>
                 </div>
+                <div className='clear-cont'><button className='clear-btn'>clear</button></div>
             </div>
         </div>
     )
