@@ -32,6 +32,10 @@ const getCartProducts= async()=>{
 },[]) 
 
 
+//* 
+
+
+
         if(isLoading){
         return (
             <div className='cart-raper'>
@@ -54,7 +58,7 @@ const getCartProducts= async()=>{
     return (
         <section className='cart-raper'>
             {cardItem.map((item)=>{
-                return <Cart key={item._id} {...item}/>
+                return <Cart key={item._id} {...item} getCartProducts={getCartProducts} />
             })}
         </section>
     )
