@@ -14,7 +14,22 @@ const creatCart = async(req,res)=>{
     res.status(200).json({savedCart})
 }
 
+const deletecartItem = async(req,res)=>{
+    try{
+        const {id:itemID} = req.params;
+        const item = await cart.findOneAndDelete({_id:itemID});
+        if(!item){
+            return res.status(401).json({message: `no item match this id${itemID}`})
+        }else{
+            return res.status(200).json({item})
+        }
+    }catch(error){
+        console.log(error)
+    }
+}
+
 module.exports = {
     getAllCartProducts,
     creatCart,
+    deletecartItem,
 }
