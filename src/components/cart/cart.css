@@ -3,11 +3,10 @@
     width: 100%;
     min-height:100vh;
     top:55px;
-    padding:100px 200px;
+    padding:150px 200px;
     display:grid;
     grid-template-columns: repeat(1, 900px);
-    column-gap: 3rem;
-    margin-top:55px;
+    
 }
 
 .no-item{
@@ -27,7 +26,7 @@
     flex-direction: row;
     justify-content:space-around;
     align-items: center;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.2em;
     border-radius:5px;
 }
 .img-continer{

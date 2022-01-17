@@ -6,7 +6,8 @@ import {  Outlet,Link } from "react-router-dom";
 
 import './nav.css';
 const Nav = () => {
-    const{isOpen,setIsOpen}=useGlobalContext()
+    const{isOpen,setIsOpen,totalItem}=useGlobalContext()
+    
     return (
         <header>
             <Link to="/"><h2>tec store</h2></Link>
@@ -15,7 +16,7 @@ const Nav = () => {
                 <Link to="/">Home</Link>
                 <a href="#">Project</a>
                 <a href="#">AbotUs</a>
-                <Link to="/cart"><BsCart4/></Link>
+                <Link to="/cart"><BsCart4/><span className="qunt">{totalItem}</span></Link>
                 {!isOpen?<FiMenu className="menu" onClick={()=>setIsOpen(!isOpen)}/>:''}
             </nav>
             <Outlet />

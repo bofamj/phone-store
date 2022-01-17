@@ -11,11 +11,25 @@ const AppProvider = ({children})=>{
     //*state for the product loding
     const [isLoading,setIsLoading]=useState(false)
     
-    //*cartItemData
-    const [cartItemData,setCartItemData]=useState([])
+//*state for the cart product
+const [cardItem,setCardItem]=useState([])
 
-
-
+//*geting the cart items from the DB
+const getCartProducts= async()=>{
+    try {
+     setIsLoading(true)
+     const response = await axios('http://localhost:3000/api/v1/cart')
+     const data = await response
+     setIsLoading(false)
+     //console.log(data.data.cartProduct);
+     setCardItem(data.data.cartProduct)
+     //console.log(cardItem);
+    } catch (error) {
+        console.log(error);
+    }
+      
+      
+ }  
 
     //*add to card click functionalty
 
@@ -28,7 +42,7 @@ const AppProvider = ({children})=>{
                 }
                 
             })
-            console.log(cartItem[0].price);
+           // console.log(cartItem[0].price);
             
             //*posting the cart data to the database
                 axios.post('http://localhost:3000/api/v1/cart',{
@@ -40,30 +54,57 @@ const AppProvider = ({children})=>{
             ) 
         }
 
+        //* deleting item from the cart
+        const deleteItem = async (e)=>{
+            const id = e.target.value;
+            try {
+                await axios.delete(`http://localhost:3000/api/v1/cart/${id}`)
+                getCartProducts()
+            }catch(error) {
+                console.log(error);
+            }
+               
+        }
+
 //*giting the data from the data base
 const getAllProducts= async()=>{
     try {
-     setIsLoading(true)
-     const response = await axios('http://localhost:3000/api/v1/products')
-     const data = await response
-     setIsLoading(false)
-     setProduct(data.data.products)
-     
+        setIsLoading(true)
+        const response = await axios('http://localhost:3000/api/v1/products')
+        const data = await response
+        setIsLoading(false)
+        setProduct(data.data.products)
+    
     } catch (error) {
         console.log(error);
     }
-      
       //console.log(product);
- }  
- 
-     
-     
+}  
+
+//* geting the total amount and the total quantity of the cart
+
+let {totalItem,cartTotal} = cardItem.reduce((total,cartItem)=>{
+    const {quantity,price}=cartItem
+    //*count items in cart
+
+    total.totalItem += quantity
+    total.cartTotal += quantity * price
+
+    return total
+},{
+    totalItem:0,
+    cartTotal:0
+})
+cartTotal = parseFloat(cartTotal.toFixed(2))
+
+console.log(totalItem,cartTotal);
+
     
-     useEffect(() =>{
+    useEffect(() =>{
         getAllProducts()
     },[]) 
     return(
-        <AppContext.Provider value={{setIsOpen,isOpen,product,isLoading,addItem,cartItemData,setIsLoading}}>
+        <AppContext.Provider value={{setIsOpen,isOpen,product,isLoading,addItem,setIsLoading,getCartProducts,cardItem,deleteItem,totalItem,cartTotal}}>
             {children}
         </AppContext.Provider>
     )

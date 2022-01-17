@@ -8,33 +8,12 @@ import axios from 'axios';
 
 
 const Carts = () => {
-    const{setIsLoading,isLoading}=useGlobalContext()
-    //*state for the cart product
-    const [cardItem,setCardItem]=useState([])
-    //*geting the cart items from the DB
-const getCartProducts= async()=>{
-    try {
-     setIsLoading(true)
-     const response = await axios('http://localhost:3000/api/v1/cart')
-     const data = await response
-     setIsLoading(false)
-     //console.log(data.data.cartProduct);
-     setCardItem(data.data.cartProduct)
-     //console.log(cardItem);
-    } catch (error) {
-        console.log(error);
-    }
-      
-      
- }  
- useEffect(() =>{
+    const{setIsLoading,isLoading,getCartProducts,cardItem}=useGlobalContext()
+    
+    
+    useEffect(() =>{
     getCartProducts()
 },[]) 
-
-
-//* 
-
-
 
         if(isLoading){
         return (
@@ -44,13 +23,11 @@ const getCartProducts= async()=>{
         )
         } 
 
-
-     if(cardItem.length === 0){
+    if(cardItem.length === 0){
         return(
             <section className='cart-raper'>
                 <h1 className='no-item'>ther is no item in the cart last add some</h1>
                 <Link to="/"><h1 className='no-item'>Home
-                
                 </h1></Link>
             </section>
             ) 
@@ -58,7 +35,7 @@ const getCartProducts= async()=>{
     return (
         <section className='cart-raper'>
             {cardItem.map((item)=>{
-                return <Cart key={item._id} {...item} getCartProducts={getCartProducts} />
+                return <Cart key={item._id} {...item}  />
             })}
         </section>
     )

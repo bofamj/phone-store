@@ -30,6 +30,17 @@ header nav a:hover{
     font-size: 1.5em;
     display: none;
 }
+.qunt{
+    width:15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color:rgba(238, 14, 14, 0.945);;
+    font-size:11px ;
+    position:absolute;
+    top:5px;
+    right: 199px;
+    font-weight: 400;
+}
 @media screen and (max-width:850px){
     header{
         padding:10px 100px

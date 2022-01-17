@@ -2,24 +2,16 @@ import React,{useState} from 'react'
 import {IoIosAddCircleOutline } from 'react-icons/io';
 import {AiOutlineMinusCircle } from 'react-icons/ai';
 import axios from 'axios';
+import {useGlobalContext} from '../../context';
 
 
 
-
-const Cart = ({company,imageURL,name,price,_id},getCartProducts) => {
+const Cart = ({company,imageURL,name,price,_id}) => {
+    const{deleteItem}=useGlobalContext()
     //console.log(company);
     const [quantity,setQuantity]=useState(1)
 
-    const deleteItem = async (e)=>{
-        const id = e.target.value;
-        try {
-            await axios.delete(`http://localhost:3000/api/v1/cart/${id}`)
-            getCartProducts()
-        }catch(error) {
-            console.log(error);
-        }
-           console.log(`yoclocked`);
-    }
+    
     return (
         <div key={_id} className='card-contener'>
             <div className='img-continer'>
