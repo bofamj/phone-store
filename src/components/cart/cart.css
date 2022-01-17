@@ -6,7 +6,7 @@
     padding:150px 200px;
     display:grid;
     grid-template-columns: repeat(1, 900px);
-    
+    posation: relative
 }
 
 .no-item{
@@ -85,4 +85,23 @@
 }
 .clear-btn:hover{
     font-size: 1.6em;
+}
+/*total*/
+
+.cart-total{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:40%;
+    margin-left:60%
+}
+.cart-total h2{
+    color:rgb(19, 23, 26);
+    text-transform: uppercase;
+}
+.cart-total h3{
+    color:rgba(238, 14, 14, 0.945);
+    text-transform: uppercase;
+    font-weight:500;
+    text-decoration:underline
 }

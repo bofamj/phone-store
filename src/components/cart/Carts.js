@@ -8,7 +8,7 @@ import axios from 'axios';
 
 
 const Carts = () => {
-    const{setIsLoading,isLoading,getCartProducts,cardItem}=useGlobalContext()
+    const{setIsLoading,isLoading,getCartProducts,cardItem,cartTotal}=useGlobalContext()
     
     
     useEffect(() =>{
@@ -37,6 +37,10 @@ const Carts = () => {
             {cardItem.map((item)=>{
                 return <Cart key={item._id} {...item}  />
             })}
+            <div className='cart-total'>
+                <h2>total amount :</h2>
+                <h3>${cartTotal}</h3>
+            </div>
         </section>
     )
 }

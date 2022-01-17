@@ -95,7 +95,7 @@ let {totalItem,cartTotal} = cardItem.reduce((total,cartItem)=>{
     totalItem:0,
     cartTotal:0
 })
-cartTotal = parseFloat(cartTotal.toFixed(2))
+cartTotal = parseFloat(cartTotal.toFixed(3))
 
 console.log(totalItem,cartTotal);
 
