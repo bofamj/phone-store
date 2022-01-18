@@ -58,8 +58,9 @@
 }
 .quantity-continer  .btn{
     cursor:pointer;
-    font-size:1.5em;
+    font-size:2.5em;
     color:rgb(19, 23, 26);
+    
 }
 .paragraph-continer h3{
     display:flex;
@@ -93,7 +94,9 @@
     align-items:center;
     justify-content:space-between;
     width:40%;
-    margin-left:60%
+    margin-left:60%;
+    border-bottom: 1px solid black;
+    padding-bottom:0.7em
 }
 .cart-total h2{
     color:rgb(19, 23, 26);
@@ -103,5 +106,12 @@
     color:rgba(238, 14, 14, 0.945);
     text-transform: uppercase;
     font-weight:500;
-    text-decoration:underline
+    padding-left: 5px;
+}
+
+/*add and subtract btn*/
+.cart-btn{
+background:none;
+border:none
+
 }

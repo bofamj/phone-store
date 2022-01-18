@@ -6,11 +6,9 @@ import {useGlobalContext} from '../../context';
 
 
 
-const Cart = ({company,imageURL,name,price,_id}) => {
-    const{deleteItem}=useGlobalContext()
-    //console.log(company);
-    const [quantity,setQuantity]=useState(1)
-
+const Cart = ({company,imageURL,name,price,_id,quantity}) => {
+    const{deleteItem,addquantity}=useGlobalContext()
+    let newPrice = price.toLocaleString()
     
     return (
         <div key={_id} className='card-contener'>
@@ -19,11 +17,11 @@ const Cart = ({company,imageURL,name,price,_id}) => {
             </div>
             <div className='paragraph-continer'>
                 <h3>{name}</h3>
-                <h4>{price}</h4>
+                <h4>${newPrice}</h4>
                 <div className='quantity-continer'>
-                    <AiOutlineMinusCircle className='btn'/>
+                    <button className='cart-btn' value={_id} name='subtract' onClick={addquantity}><AiOutlineMinusCircle className='btn' /></button>
                     <p>{quantity}</p>
-                    <IoIosAddCircleOutline className='btn'/>
+                    <button className='cart-btn' value={_id} name='add' onClick={addquantity}><IoIosAddCircleOutline className='btn'/></button>
                 </div>
                 <div className='clear-cont'><button className='clear-btn' value={_id} onClick={deleteItem} >clear</button></div>
             </div>

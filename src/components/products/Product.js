@@ -7,6 +7,7 @@ import {useGlobalContext} from '../../context';
 
 
 const Product = ({name,company,imageURL,price,rating,_id}) => {
+    let newPrice = price.toLocaleString()
     const{addItem}=useGlobalContext()
     return (
         <div className='cart'>
@@ -16,7 +17,7 @@ const Product = ({name,company,imageURL,price,rating,_id}) => {
             </div>
              <div className='text-continer'>
                 <h2>{name}</h2>
-                <h3>${price}</h3>
+                <h3>${newPrice}</h3>
             </div> 
         </div>
     )

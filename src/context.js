@@ -14,6 +14,8 @@ const AppProvider = ({children})=>{
 //*state for the cart product
 const [cardItem,setCardItem]=useState([])
 
+const [quantity,setQuantity]=useState(1)
+
 //*geting the cart items from the DB
 const getCartProducts= async()=>{
     try {
@@ -96,15 +98,39 @@ let {totalItem,cartTotal} = cardItem.reduce((total,cartItem)=>{
     cartTotal:0
 })
 cartTotal = parseFloat(cartTotal.toFixed(3))
+cartTotal=cartTotal.toLocaleString()
 
-console.log(totalItem,cartTotal);
+
+//* add and subtract cuntity funcionality
+
+const addquantity = async (e)=>{
+    const id = e.target.parentNode.value;
+    //console.log(id);
+     
+    //console.log(newQuantity);
+if(e.target.name == 'add'){
+    setQuantity(quantity+= 1) 
+}else{
+    setQuantity(quantity-= 1)
+}
+console.log(quantity);
+     try {
+        await axios.patch(`http://localhost:3000/api/v1/cart/${id}`,{
+            quantity:quantity
+        })
+        getCartProducts()
+    } catch (error) {
+        console.log(error);
+    }  
+    
+}
 
     
     useEffect(() =>{
         getAllProducts()
     },[]) 
     return(
-        <AppContext.Provider value={{setIsOpen,isOpen,product,isLoading,addItem,setIsLoading,getCartProducts,cardItem,deleteItem,totalItem,cartTotal}}>
+        <AppContext.Provider value={{setIsOpen,isOpen,product,isLoading,addItem,setIsLoading,getCartProducts,cardItem,deleteItem,totalItem,cartTotal,addquantity}}>
             {children}
         </AppContext.Provider>
     )
