@@ -21,9 +21,9 @@ const Cart = ({company,imageURL,name,price,_id,quantity}) => {
                 <div className='quantity-continer'>
                     <button className='cart-btn' value={_id}  onClick={subquantity}><AiOutlineMinusCircle className='btn' /></button>
                     <p>{quantity}</p>
-                    <button className='cart-btn' value={_id}  onClick={addquantity}><IoIosAddCircleOutline className='btn'/></button>
+                    <button className='cart-btn' value={_id}   onClick={addquantity}><IoIosAddCircleOutline className='btn' /></button>
                 </div>
-                <div className='clear-cont'><button className='clear-btn' value={_id} onClick={deleteItem} >clear</button></div>
+                <div className='clear-cont'><button className='clear-btn' value={_id}  onClick={deleteItem} >clear</button></div>
             </div>
         </div>
     )

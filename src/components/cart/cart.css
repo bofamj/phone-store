@@ -87,6 +87,9 @@
 .clear-btn:hover{
     font-size: 1.6em;
 }
+button > * {
+    pointer-events: none;
+  }
 /*total*/
 
 .cart-total{

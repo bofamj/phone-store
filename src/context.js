@@ -14,7 +14,7 @@ const AppProvider = ({children})=>{
 //*state for the cart product
 const [cardItem,setCardItem]=useState([])
 
-const [quan,setQuan]=useState(1)
+const [quan,setQuan]=useState(2)
 
 
 
@@ -27,19 +27,15 @@ const [quan,setQuan]=useState(1)
                 if(item._id == val){
                     return item
                 }
-                
             })
-           // console.log(cartItem[0].price);
-            
+            console.log(cartItem[0]);
             //*posting the cart data to the database
                 axios.post('http://localhost:3000/api/v1/cart',{
                 name:cartItem[0].name,
                 price:cartItem[0].price,
                 imageURL:cartItem[0].imageURL,
             }
-        
             ) 
-            
         }
 
         //! deleting item from the cart
@@ -53,7 +49,6 @@ const [quan,setQuan]=useState(1)
             }catch(error) {
                 console.log(error);
             }
-               
         }
 
 //*geting the cart items from the DB
@@ -102,11 +97,49 @@ cartTotal = parseFloat(cartTotal.toFixed(3))
 cartTotal=cartTotal.toLocaleString()
 
 
-//! add and subtract cuntity funcionality
+//! add cuntity funcionality
 
 const addquantity = async (e)=>{
     const id = e.target.parentNode.value;
-    const newCartItems = cardItem.find(item=>item._id === id) 
+    console.log(id);
+    const newCartItems = cardItem.map(item=>{
+        if(item._id === id){
+            return {...item,quantity:item.quantity+1 }
+        }
+        return item
+        
+    })
+    //console.log(newCartItems);
+    setCardItem(newCartItems)
+    
+    try {
+        await axios.patch(`http://localhost:3000/api/v1/cart/${id}`,{
+            quantity:1
+        })
+        
+    } catch (error) {
+        console.log(error);
+    } 
+    //console.log(newCartItems.quantity);
+    
+    
+}
+
+
+//! subtract cuntity funcionality
+const subquantity = async (e)=>{
+    const id = e.target.parentNode.value;
+    //console.log(e.target.parentNode.context);
+    const newCartItems = cardItem.map(item=>{
+        if(item._id === id){
+            setQuan(item.quantity-1)
+            return {...item,quantity:item.quantity-1 }
+        }
+        return item
+        
+    })
+    //console.log(quan);
+    setCardItem(newCartItems)
     
     try {
         await axios.patch(`http://localhost:3000/api/v1/cart/${id}`,{
@@ -116,25 +149,15 @@ const addquantity = async (e)=>{
     } catch (error) {
         console.log(error);
     } 
-    setQuan(newCartItems.quantity +=1)
+    //console.log(newCartItems.quantity);
 }
-const subquantity = async (e)=>{
-    const id = e.target.parentNode.value;
-    const newCartItems = cardItem.find(item=>item._id === id)
-        setQuan(newCartItems.quantity -=1)
-    try {
-        await axios.patch(`http://localhost:3000/api/v1/cart/${id}`,{
-            quantity:quan
-        })
-    } catch (error) {
-        console.log(error);
-    } 
     
-}
+    
 
-console.log(quan);
+
     useEffect(() =>{
         getAllProducts()
+        getCartProducts()
     },[]) 
     return(
         <AppContext.Provider value={{setIsOpen,isOpen,product,isLoading,addItem,setIsLoading,getCartProducts,cardItem,deleteItem,totalItem,cartTotal,addquantity,subquantity}}>
