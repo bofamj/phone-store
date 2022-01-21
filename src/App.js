@@ -3,6 +3,7 @@ import SaideBar from './components/side-bar/SaideBar'
 import Home from './components/home/Home'
 import Products from './components/products/Products'
 import Carts from './components/cart/Carts'
+import SingelProduct from './components/products/SingelProduct'
 import './App.css';
 import {
   Routes,
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Carts/>} />
+          <Route path="/:id" element={<SingelProduct/>} />
         </Routes>
       </div>
     

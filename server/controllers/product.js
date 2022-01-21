@@ -5,7 +5,7 @@ const product = require('../models/product');
 //* all product route functions
 
 const getAllProducts =async (req,res)=>{
-    const {company,name,price,rating,}=req.query;
+    const {company,name,price,rating,_id}=req.query;
     let queryObject = {}
 
     //*Search by the company
@@ -17,6 +17,12 @@ const getAllProducts =async (req,res)=>{
 
 if(name){
     queryObject.name = {$regex:name,$options:'i'}
+}
+
+//* search by id
+
+if(_id){
+    queryObject._id = _id
 }
 
 //* sort

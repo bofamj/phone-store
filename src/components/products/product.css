@@ -80,3 +80,10 @@
     font-size: 25px;
     cursor:pointer;
 }
+.cart-raper{
+    background-color: rgb(238, 228, 189);
+    width: 100%;
+    min-height:100vh;
+    top:55px;
+    padding:150px 200px;
+}
