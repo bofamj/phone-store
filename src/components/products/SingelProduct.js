@@ -20,7 +20,7 @@ const SingelProduct = () => {
         } catch (error) {
             console.log(error);
         }
-          console.log(singelProduct);
+          //console.log(singelProduct);
     }  
     useEffect(() =>{
         getSingelProducts()
@@ -32,15 +32,14 @@ const SingelProduct = () => {
                 {singelProduct.map(product =>{
                     const {company,description,imageURL,name,price,rating,_id}=product
                     return(
-                        <div key={_id}>
-                            <div>
+                        <div key={_id} className='page-contan'>
+                            <div className='img'>
                                 <img src={imageURL} alt={name} />
                             </div>
-                            <div>
-                                <h1>{company}:{name}</h1>
+                            <div className='text-contin'>
+                                <h1>{company} :  {name}</h1>
                                 <p>{description}</p>
-                                <h3>{price}</h3>
-                                <h4>{rating}</h4>
+                                <h3>{price}    <span>{rating}</span></h3>
                             </div>
                         </div>
                     )
