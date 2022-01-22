@@ -14,7 +14,7 @@ const AppProvider = ({children})=>{
 //*state for the cart product
 const [cardItem,setCardItem]=useState([])
 
-const [quan,setQuan]=useState(2)
+const [quan,setQuan]=useState(1)
 
 
 
@@ -99,57 +99,49 @@ cartTotal=cartTotal.toLocaleString()
 
 //! add cuntity funcionality
 
-const addquantity = async (e)=>{
-    const id = e.target.parentNode.value;
-    console.log(id);
+const addquantity = async (e,id)=>{
+     let qna = e.target.value;
+     const nm =parseInt(qna)
     const newCartItems = cardItem.map(item=>{
         if(item._id === id){
-            return {...item,quantity:item.quantity+1 }
-        }
+            return {...item,quantity:item.quantity+=1 }
+       }
         return item
-        
-    })
-    //console.log(newCartItems);
-    setCardItem(newCartItems)
-    
-    try {
-        await axios.patch(`http://localhost:3000/api/v1/cart/${id}`,{
-            quantity:1
-        })
-        
-    } catch (error) {
-        console.log(error);
-    } 
-    //console.log(newCartItems.quantity);
-    
-    
+   })
+        setCardItem(newCartItems)
+        try {
+            await axios.patch(`http://localhost:3000/api/v1/cart/${id}`,{
+                quantity:nm
+            })
+            
+        } catch (error) {
+            console.log(error);
+        }  
+        console.log(qna )
 }
 
 
 //! subtract cuntity funcionality
-const subquantity = async (e)=>{
-    const id = e.target.parentNode.value;
-    //console.log(e.target.parentNode.context);
+const subquantity = async (e,id)=>{
+    const qna = e.target.value;
+    const nm =parseInt(qna)
     const newCartItems = cardItem.map(item=>{
         if(item._id === id){
-            setQuan(item.quantity-1)
-            return {...item,quantity:item.quantity-1 }
+            return {...item,quantity:item.quantity-=1 }
         }
         return item
         
     })
-    //console.log(quan);
     setCardItem(newCartItems)
     
-    try {
+     try {
         await axios.patch(`http://localhost:3000/api/v1/cart/${id}`,{
-            quantity:quan
+            quantity:nm
         })
         
     } catch (error) {
         console.log(error);
-    } 
-    //console.log(newCartItems.quantity);
+    }  
 }
     
     
@@ -190,3 +182,29 @@ console.log(quantity);
     } catch (error) {
         console.log(error);
     }  */
+
+    /*
+    const addquantity =  (e)=>{
+    const id = e.target.parentNode.value;
+    //console.log(id);
+    const newCartItems = cardItem.map(item=>{
+        if(item._id === id){
+             console.log({...item,quantity:item.quantity+1 })
+        }
+        return item
+        
+    })
+       setCardItem(newCartItems)
+    
+    /* try {
+        await axios.patch(`http://localhost:3000/api/v1/cart/${id}`,{
+            quantity:1
+        })
+        
+    } catch (error) {
+        console.log(error);
+    }  
+    
+    //console.log(cardItem);
+    
+}*/
