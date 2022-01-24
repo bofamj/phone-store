@@ -2,25 +2,22 @@ import React,{useState,useEffect} from 'react';
 import { useParams, Link } from 'react-router-dom'
 import axios from 'axios';
 import './product.css'
+import {useGlobalContext} from '../../context';
 
 
 
 const SingelProduct = () => {
+    const{addItem}=useGlobalContext()
     const {id}=useParams()
     const [singelProduct,setSingelProduct]=useState([])
-    console.log(id);
     const getSingelProducts= async()=>{
         try {
-            //setIsLoading(true)
             const response = await axios(`http://localhost:3000/api/v1/products?_id=${id}`)
             const data = await response
-            //setIsLoading(false)
             setSingelProduct(data.data.products)
-           // console.log(data.data.products)
         } catch (error) {
             console.log(error);
         }
-          //console.log(singelProduct);
     }  
     useEffect(() =>{
         getSingelProducts()
@@ -39,7 +36,11 @@ const SingelProduct = () => {
                             <div className='text-contin'>
                                 <h1>{company} :  {name}</h1>
                                 <p>{description}</p>
-                                <h3>{price}    <span>{rating}</span></h3>
+                                <div className='pric-rat'>
+                                    <h3>${price} </h3>
+                                    <h3>Rate : {rating}</h3>
+                                </div>
+                                <botton className='addTocart-btn'  onClick={addItem}  value={_id} >ADD TO CART</botton>
                             </div>
                         </div>
                     )

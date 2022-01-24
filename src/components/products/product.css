@@ -119,3 +119,60 @@
 .text-contin p{
     text-align: start;
 }
+
+/*add to cart*/
+
+.addTocart-btn{
+    background-color:rgb(233, 63, 71);
+    cursor:pointer;
+    padding:5px 10px;
+    border-radius:5px;
+    transition:0.5s;
+    color:#fff;
+}
+.addTocart-btn:hover{
+    transform: scale(1.1)
+}
+
+/*price and rate continer*/
+.pric-rat{
+    width:50%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    color:rgb(233, 63, 71);
+}
+
+/* midya*/
+@media screen and (max-width:1050px){
+    .all-carts{
+        grid-template-columns: repeat(3, 300px);
+        padding: 100px 0px;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:850px){
+    .all-carts{
+        grid-template-columns: repeat(2, 300px);
+        padding: 100px 0px;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width:600px){
+    .all-carts{
+        grid-template-columns: repeat(2, 250px);
+        padding: 100px 0px;
+        justify-content: center;
+        
+    }
+}
+@media screen and (max-width:470px){
+    .all-carts{
+        grid-template-columns: repeat(1, 300px);
+        padding: 100px 0px;
+        justify-content: center;
+        
+    }
+}

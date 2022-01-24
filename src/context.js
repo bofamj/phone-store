@@ -20,23 +20,22 @@ const [quan,setQuan]=useState(1)
 
     //*add to card click functionalty
 
-        const addItem = e=>{
-            const val = e.target.value
-            
-            const cartItem = product.filter((item)=>{
-                if(item._id == val){
-                    return item
-                }
-            })
-            console.log(cartItem[0]);
-            //*posting the cart data to the database
-                axios.post('http://localhost:3000/api/v1/cart',{
-                name:cartItem[0].name,
-                price:cartItem[0].price,
-                imageURL:cartItem[0].imageURL,
-            }
-            ) 
+const addItem = e=>{
+    const val = e.target.value
+        const cartItem = product.filter((item)=>{
+        if(item._id == val){
+            return item
         }
+    }) 
+    console.log(e.target.value);
+    //setCardItem([...cardItem,cartItem])
+//*posting the cart data to the database
+     axios.post('http://localhost:3000/api/v1/cart',{
+        name:cartItem[0].name,
+        price:cartItem[0].price,
+        imageURL:cartItem[0].imageURL,
+    })  
+    }
 
         //! deleting item from the cart
         const deleteItem = async (e)=>{
@@ -52,8 +51,8 @@ const [quan,setQuan]=useState(1)
         }
 
 //*geting the cart items from the DB
-const getCartProducts= async()=>{
-    try {
+ const getCartProducts= async()=>{
+     try {
      setIsLoading(true)
      const response = await axios('http://localhost:3000/api/v1/cart')
      const data = await response
@@ -61,8 +60,8 @@ const getCartProducts= async()=>{
      setCardItem(data.data.cartProduct)
     } catch (error) {
         console.log(error);
-    }
-}  
+    } 
+}   
 
 //*giting the data from the data base
 const getAllProducts= async()=>{
