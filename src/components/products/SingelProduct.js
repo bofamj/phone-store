@@ -25,7 +25,7 @@ const SingelProduct = () => {
     },[]) 
     
   return (
-            <div className='cart-raper'>
+            <div className='cart-raper-singel'>
                 {singelProduct.map(product =>{
                     const {company,description,imageURL,name,price,rating,_id}=product
                     return(

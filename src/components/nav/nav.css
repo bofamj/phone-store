@@ -23,11 +23,11 @@ header nav a{
     text-transform: uppercase;
 }
 header nav a:hover{
-    color:rgba(194, 45, 45,0.5)
+    color:rgba(241, 241, 241, 0.5)
 }
 .menu{
     padding-left:10px ;
-    font-size: 1.5em;
+    font-size: 2em;
     display: none;
 }
 .qunt{
@@ -41,16 +41,25 @@ header nav a:hover{
     right: 199px;
     font-weight: 400;
 }
+@media screen and (max-width:1280px){
+    header{
+        padding:10px 50px;
+        font-size:1.5em
+    }
+}
 @media screen and (max-width:850px){
     header{
         padding:10px 100px
+    }
+    header h2{
+        font-size: 2em;
     }
     header nav a{
         display:none
     }
     .menu{
         cursor: pointer;
-        font-size: 2em;
+        font-size: 2.8em;
         display: block;
         transition: 0.5s ease;
     }
@@ -58,8 +67,25 @@ header nav a:hover{
         transform:rotate(90deg)
     }
 }
-@media screen and (max-width:450px){
+@media screen and (max-width:550px){
     header{
-        padding:10px 50px
+        padding:10px 30px
+    }
+    header h2{
+        font-size: 1.2em;
+    }
+    .menu{
+        font-size: 1.8em;
+    }
+}
+@media screen and (max-width:350px){
+    header{
+        padding:10px 20px
+    }
+    header h2{
+        font-size: 0.75em;
+    }
+    .menu{
+        font-size: 1.5em;
     }
 }

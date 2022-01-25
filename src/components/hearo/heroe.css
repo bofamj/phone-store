@@ -12,34 +12,58 @@
     padding:10px 200px;
     top:55px;
     right:0;
-    z-index: -5;
+    z-index: -10;
     color:rgb(255, 255, 255);
-    
+    text-transform: uppercase;
 }
 .hearo h1{
     font-size:40px;
-    font-weight: 800;
+    font-weight: 700;
 }
-
+.hearo h2{
+    font-size:35px;
+    font-weight:lighter
+}
 /*https://cdn57.androidauthority.net/wp-content/uploads/2018/10/oppo-r-series-1.jpg*/
 
 /* midya*/
 
-@media screen and (max-width:850px){
+@media screen and (max-width:1050px){
     .hearo{
         padding:10px 100px
     }
     .hearo h1{
-        font-size:30px;
-        font-weight: 900;
+        font-size:50px;
+        font-weight: 700;
+    }
+    .hearo h2{
+        font-size:35px;
+        font-weight:lighter
     }
 }
-@media screen and (max-width:450px){
+@media screen and (max-width:550px){
     .hearo{
-        padding:10px 50px
+        padding:10px 30px
     }
     .hearo h1{
         font-size:30px;
-        font-weight:900;
+        font-weight:700;
+    }
+    .hearo h2{
+        font-size:25px;
+        font-weight:lighter
+    }
+}
+@media screen and (max-width:350px){
+    .hearo{
+        padding:10px 30px
+    }
+    .hearo h1{
+        font-size:20px;
+        font-weight:700;
+    }
+    .hearo h2{
+        font-size:15px;
+        font-weight:700
     }
 }

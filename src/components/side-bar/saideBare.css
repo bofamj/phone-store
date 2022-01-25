@@ -3,9 +3,11 @@
     flex-direction: column;
     width: 360px;
     height:calc(100vh - 55px);
+    top:55px;
     padding:10px 30px 0px  5px;
     background-color: rgb(13, 23, 49);
     z-index:1000;
+    position:absolute;
 }
 .said-bar nav{
     margin-top:10px;
@@ -18,15 +20,27 @@
 }
 .said-bar nav a{
     color:#fff;
+    font-size:40px
 }
 .said-bar nav a:hover{
-    color:rgba(194, 45, 45,0.5)
+    color:rgba(235, 235, 235, 0.5)
 }
 .cancel-btn{
-    font-size:20px;
+    font-size:40px;
     color:rgb(255, 0, 0);
     cursor:pointer
 }
 .cancel-btn:hover{
     color:rgba(255,0,0,0.5);
+}
+@media screen and (max-width:550px){
+    .said-bar{
+        top:70px;
+        height:calc(100vh - 70px);
+        
+    }
+    .said-bar nav a{
+        font-size:25px;
+    }
+    
 }
