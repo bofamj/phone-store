@@ -186,12 +186,39 @@ border:none
 
     }
     .card-contener{
-        flex-direction: column;
         margin-bottom: 1.2em;
         border-radius:5px;
-        height:300px;
+        height:150px;
     }
     .paragraph-continer{
         flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+    .paragraph-continer h3{
+        width: 70%;
+        margin: 0;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+    .paragraph-continer h4{
+        width: 70%;
+    }
+    .img-continer{
+        width: 130px;
+        padding:5px
+    }
+    .quantity-continer{
+        width:50.5%;
+        font-size:1.3em
+    }
+    .cart-total{
+        font-size:15px;
+        width:90%;
+        margin:0;
+    }
+    .cart-total h3{
+        font-size:18px
     }
 }
