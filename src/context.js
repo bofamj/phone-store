@@ -27,10 +27,10 @@ const addItem = e=>{
             return item
         }
     }) 
-    console.log(e.target.value);
+    //console.log(e.target.value);
     //setCardItem([...cardItem,cartItem])
 //*posting the cart data to the database
-     axios.post('http://localhost:3000/api/v1/cart',{
+      axios.post('http://localhost:3000/api/v1/cart',{
         name:cartItem[0].name,
         price:cartItem[0].price,
         imageURL:cartItem[0].imageURL,

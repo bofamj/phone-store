@@ -15,10 +15,12 @@ const SingelProduct = () => {
             const response = await axios(`http://localhost:3000/api/v1/products?_id=${id}`)
             const data = await response
             setSingelProduct(data.data.products)
+            //console.log(data.data.products);
         } catch (error) {
             console.log(error);
         }
     }  
+    //console.log(singelProduct);
     useEffect(() =>{
         getSingelProducts()
         
@@ -27,6 +29,7 @@ const SingelProduct = () => {
   return (
             <div className='cart-raper-singel'>
                 {singelProduct.map(product =>{
+                    //console.log(product._id);
                     const {company,description,imageURL,name,price,rating,_id}=product
                     return(
                         <div key={_id} className='page-contan'>
@@ -40,7 +43,7 @@ const SingelProduct = () => {
                                     <h3>${price} </h3>
                                     <h3>Rate : {rating}</h3>
                                 </div>
-                                <botton className='addTocart-btn'  onClick={addItem}  value={_id} >ADD TO CART</botton>
+                                <button className='addTocart-btn'  onClick={addItem}  value={_id} >ADD TO CART</button>
                             </div>
                         </div>
                     )
