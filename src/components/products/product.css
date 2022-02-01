@@ -227,4 +227,31 @@
         justify-content: center;
         
     }
+    .page-contan{
+        flex-direction: column;
+        padding-bottom: 15px;
+    }
+    .img{
+        width:90% ;
+    }
+    .img img{
+        width:100% ;
+    }
+    .text-contin{
+        width:90% ;
+        height: 60%;
+    }
+    .text-contin h1{
+        font-size:20px;
+        text-align: start;
+    }
+    .text-contin p{
+        font-size:20px
+    }
+    .addTocart-btn{
+        font-size: 15px
+    }
+    .pric-rat{
+        font-size: 15px;
+    }
 }
