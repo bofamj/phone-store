@@ -19,7 +19,7 @@ const Cart = ({company,imageURL,name,price,_id,quantity}) => {
                 <h3>{name}</h3>
                 <h4>${newPrice}</h4>
                 <div className='quantity-continer'>
-                    <button className='cart-btn' value={quantity-1}  onClick={(e)=>subquantity(e,_id)}><AiOutlineMinusCircle  className='btn' /></button>
+                    <button className='cart-btn' value={quantity>1 ? quantity -1 :quantity = 1 }  onClick={(e)=>subquantity(e,_id)}><AiOutlineMinusCircle  className='btn' /></button>
                     <p>{quantity}</p>
                     <button className='cart-btn' value={quantity+=1}   onClick={(e)=>addquantity(e,_id)}><IoIosAddCircleOutline className='btn' /></button>
                 </div>

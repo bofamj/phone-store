@@ -35,6 +35,7 @@ const addItem = e=>{
         price:cartItem[0].price,
         imageURL:cartItem[0].imageURL,
     })  
+    //getCartProducts()
     }
 
         //! deleting item from the cart
@@ -126,7 +127,7 @@ const subquantity = async (e,id)=>{
     const nm =parseInt(qna)
     const newCartItems = cardItem.map(item=>{
         if(item._id === id){
-            return {...item,quantity:item.quantity-=1 }
+            return {...item,quantity:nm }
         }
         return item
         

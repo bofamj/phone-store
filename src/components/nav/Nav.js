@@ -14,8 +14,6 @@ const Nav = () => {
             <nav>
                 
                 <Link to="/">Home</Link>
-                <a href="#">Project</a>
-                <a href="#">AbotUs</a>
                 <Link to="/cart"><BsCart4/><span className="qunt">{totalItem}</span></Link>
                 {!isOpen?<FiMenu className="menu" onClick={()=>setIsOpen(!isOpen)}/>:''}
             </nav>
